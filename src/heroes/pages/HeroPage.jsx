@@ -5,9 +5,10 @@ import { getHeroesById } from "../helpers";
 export const HeroPage = () => {
   //*Obteniendo el parametro(/:id) de mi Url
   const { heroId, ...param } = useParams();
+  
   const navigate = useNavigate();
+
   const hero = useMemo(() => {
-    console.log('memorizado');
     return getHeroesById(heroId)
   }, [heroId]) 
 
@@ -22,10 +23,10 @@ export const HeroPage = () => {
   };
 
   return (
-    <div className="col p-5 ">
+    <div className="d-flex justify-content-center p-5 animate__animated animate__fadeInLeft">
       <div className="card mb-3 " style={{ width: "820px" }}>
         <div className="row g-0">
-          <div className="col-md-4">
+          <div className="col-md-4 animate__animated animate__bounce">
             <img
               src={heroImageUrl}
               className="img-fluid rounded-start"
