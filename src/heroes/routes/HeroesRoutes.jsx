@@ -5,6 +5,9 @@ import { DCPage, HeroPage, MarvelPage, SearchPage } from "../pages"
 
 
 export const HeroesRoutes = () => {
+
+
+
   return (
     <>
         <Navbar />
